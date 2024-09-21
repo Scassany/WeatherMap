@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'com.google.cloud', name: 'libraries-bom', version: '26.46.0'
+    implementation group: 'com.google.cloud', name: 'google-cloud-storage', version: '2.43.0'
+    implementation "io.github.spair:imgui-java-app:1.87.0"
+    implementation group: 'org.l33tlabs.twl', name: 'pngdecoder', version: '1.0'
+    implementation group: 'org.lwjgl', name: 'lwjgl-nanovg', version:'3.1.2-SNAPSHOT', classifier:'natives-windows'
+}
+
+test {
+    useJUnitPlatform()
+}
